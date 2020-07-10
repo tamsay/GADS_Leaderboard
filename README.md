@@ -1,10 +1,14 @@
-# Leaderboard
+# GADS Leaderboard
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/40dc40d4-59df-46b4-beec-3d3febd11a76/deploy-status)](https://app.netlify.com/sites/wizardly-bassi-8d563d/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0ec2079a-f69c-4e1c-8144-35c5d33d11a1/deploy-status)](https://app.netlify.com/sites/naughty-engelbart-6220f2/deploys)
 
-The leaderboard project is my entry in one of the HNG7 internship task. It was created using HTML, CSS, Bootstrap and Vanilla Javascript. 
+This leaderboard project is a modification of the existing leaderboard on the GADS website. The changes made are listed below
+- Adding a profile picture to the top three scores
+- Making the leaderboard table responsive on all screens
+- Adding a sidebar navigation for the main categories on large screens and horizontal top navigation for smaller screens
+- Animating the leader cards
 
-The data being used to populate the leaderboard is gotten from a JSON object in the script file and it can be easily modified to fetch data from an API as well. The screenshot of the desktop and mobile views are shown below.
+The leaderboard table data was created via javascript and the data was gotten from a JSON object locally created in the script file. It can be easily modified to fetch data from an API also. 
 
 ## Screenshots
 
@@ -14,7 +18,7 @@ The data being used to populate the leaderboard is gotten from a JSON object in 
 
 ## Live Demo
 
-[Hosted Link](https://wizardly-bassi-8d563d.netlify.app)
+[Hosted Link](naughty-engelbart-6220f2.netlify.app)
 
 ## Author
 
@@ -26,7 +30,7 @@ Longe Temitope
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/tamsay/Leaderboard/issues)
+Feel free to check the [issues page](https://github.com/tamsay/GADS_Leaderboard/issues)
 
 ## Show your support
 
