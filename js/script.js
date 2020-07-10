@@ -253,11 +253,11 @@ const createTotalTable=(tableData)=>{
     },
   
       columns:[
-        {title:"S/N", field:"serialNum", sorter: 'number', editor:"false", frozen:true, widthGrow:1, minWidth: 75},
-        {title:"Name", field:"name", sorter: 'string', editor:"false", widthGrow:4, minWidth: 150},
-        {title:"Country", field:"country", align:"center", sorter: 'string', editor:false, widthGrow:2,minWidth: 100},
-        {title:"Total Points", field:"score.hours", align:"center", sorter: 'number', editor:false, widthGrow:2,  formatter:"money", formatterParams:{thousand:",", precision:false}, minWidth: 100},
-        {title:"Skill IQ", field:"score.iq", align:"center", sorter: 'number', editor:false, widthGrow:2, formatter:"money", formatterParams:{thousand:",", precision:false}, minWidth: 100},
+        {title:"S/N", field:"serialNum", sorter: 'number', editor:"false", frozen:true, widthGrow:1, minWidth: 75, },
+        {title:"Name", field:"name", sorter: 'string', editor:"false", widthGrow:4, minWidth: 150, headerFilter: true},
+        {title:"Country", field:"country", align:"center", sorter: 'string', editor:false, widthGrow:2,minWidth: 100, headerFilter: true},
+        {title:"Total Points", field:"score.hours", align:"center", sorter: 'number', editor:false, widthGrow:2,  formatter:"money", formatterParams:{thousand:",", precision:false}, minWidth: 100, headerFilter: true},
+        {title:"Skill IQ", field:"score.iq", align:"center", sorter: 'number', editor:false, widthGrow:2, formatter:"money", formatterParams:{thousand:",", precision:false}, minWidth: 100, headerFilter: true},
       ],
     });
   
@@ -290,10 +290,10 @@ const createSkillTable=(tableData)=>{
   
       columns:[
         {title:"S/N", field:"serialNum", sorter: 'number', editor:"false", frozen:true, widthGrow:1, minWidth: 75},
-        {title:"Name", field:"name", sorter: 'string', editor:"false", widthGrow:4, minWidth: 150},
-        {title:"Country", field:"country", align:"center", sorter: 'string', editor:false, widthGrow:2,minWidth: 100},
+        {title:"Name", field:"name", sorter: 'string', editor:"false", widthGrow:4, minWidth: 150, headerFilter: true},
+        {title:"Country", field:"country", align:"center", sorter: 'string', editor:false, widthGrow:2,minWidth: 100, headerFilter: true},
         // {title:"Total Points", field:"score.hours", align:"center", sorter: 'number', editor:false, widthGrow:2,  formatter:"money", formatterParams:{thousand:",", precision:false}, minWidth: 100},
-        {title:"Skill IQ", field:"score.iq", align:"center", sorter: 'number', editor:false, widthGrow:2, formatter:"money", formatterParams:{thousand:",", precision:false}, minWidth: 100},
+        {title:"Skill IQ", field:"score.iq", align:"center", sorter: 'number', editor:false, widthGrow:2, formatter:"money", formatterParams:{thousand:",", precision:false}, minWidth: 100, headerFilter: true},
       ],
     });
   
