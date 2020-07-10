@@ -1,0 +1,855 @@
+/* Global parameters */
+@font-face {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 700;
+    src: local('./Karla/Karla-Bold.ttf'), local('Karla-Bold.woff2'),
+         format('woff2'), format('woff'); 
+  } 
+@font-face{
+  font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+  src: url(../fonts/Montserrat-Regular.ttf), format('ttf');
+}
+  body{
+    background-color: white;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin: 0px;
+      padding: 13em 0em 0em 0em;
+      font-family: Karla, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  h1{
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+  }
+  .row{
+    margin: 0px;
+    padding: 0px;
+  }
+
+/* Page Header Section */
+#pageHeader{
+margin: 0px;
+display: flex;
+flex-direction: column;
+}
+
+/* Navigation Section */
+  #navHeader{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin: 0px;
+      padding: 10px 0px;
+      background-color: white;
+      border-radius: 0px;
+  }
+
+  #navHeader .navbar-brand{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px;
+    margin: 0px;
+  }
+  #navHeader .navbar-brand img{
+    width: 60%;
+    align-self: flex-end;
+    margin: 0px 20px 0px 0px;
+  }
+  #navbarSupportedContent{
+    justify-content: center;
+    align-self: flex-start;
+  }
+  #navbarSupportedContent .btn .fa-search{
+    color: #ffaf30;    
+    border: 1px solid #ffaf30;
+    padding: 5px;
+  }
+  #navbarSupportedContent a{
+    color: black;
+    font-family: Montserrat, 'Segoe UI', serif;
+    font-weight: 600;
+  }
+  #navbarSupportedContent a:hover{
+    color: #ffaf30;    
+  }
+  #navbarSupportedContent .active{
+    border-bottom: 2px solid #ffaf30;
+  }
+  .navbar-toggler-icon{
+    color: #ffaf30;
+  }
+  #navbarSupportedContent .form-inline .form-control{
+    display: none;
+    }
+
+  /* Main Header Section */
+  #mainHeader{
+    background-color: black;
+    color: white;
+    padding: 0.25em 0em;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+  }
+  #mainHeader .col-4{
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    /* width: 500%; */
+  }
+  #mainHeader .col-4 img{
+    width: 90%;
+  }
+  #mainHeader .col-8{
+    padding: 0px 12em 0px 0px;
+    margin: 0px;
+  }
+  #mainHeader .col-8 h1{
+    font-size: 3.5em;
+  }
+
+  /* Overall Content Section */
+  #contentSection{
+    margin: 0px;
+    padding: 0px 10px;
+  }
+
+  /* Sidebar Menu Section */
+#sidebar{
+  padding: 5.5em 1em 0em 1em;
+  margin: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 10em;
+  left: 0;
+  height: 100%;
+  box-sizing: border-box;
+}  
+
+/* Main Content Section */
+#mainContent{
+  margin: 0px;
+  margin-left: 16.67%;
+  padding: 0px;
+  /* border: 1px solid black; */
+  border-radius: 5px;
+}
+
+.card-deck{
+    margin: 0px auto;
+    width: 80%;
+    margin-bottom: 2em;
+}
+.card{
+    border-radius: 10px 10px 10px 10px;
+    padding: 0px 0px 5px 0px;
+    margin: 0em 2em;
+}
+.card:hover{
+  transform: scale(1.1);
+  animation-name: zoom;
+    animation-duration: 0.5s;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes zoom{
+  0% {transform: scale(1);}
+    50% {}
+    100% { transform: scale(1.1);} 
+}
+.firstPosition {
+    background-color: gold;
+}
+.secondPosition {
+    background-color: silver;
+}
+.thirdPosition {
+    background-color: burlywood;
+}
+.profilePicture{
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+.winnerUsername{
+  font-size: 1.25em;
+  font-weight: bold;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+}
+.leaderCaption{
+    padding: 0px;
+    margin: 0px 0px 2.5px 0px;
+}
+.rank{
+    padding: 0px 5px;
+    margin: 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.rank img{
+    width: 40%;
+}
+.topScore{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.topScore p{
+    font-size: 1.5em;
+    margin: 0px;
+    padding: 0px;
+    font-weight: bold;
+}
+.topScore p span:last-child{
+  font-size: 0.5em;
+  font-weight: bold;
+}
+.country{
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1em;
+    padding: 0px;
+    margin: 0px;
+}
+
+  .nav-pills-custom .nav-link {
+    color: black;
+    background: #fff;
+    position: relative;
+    width: 100%;
+    font-size: 1.5em;
+    font-family: 'Karla';
+    font-weight: 600;
+  }
+
+ .nav-pills-custom .nav-link.active {
+    color: black;
+    background: rgb(129, 163, 238);
+  }
+  .nav-pills-custom .nav-link:hover{
+    background-color: lightgreen;
+  }
+  .fade{
+    transition-duration: 0s;
+  }
+
+/* Table Section */
+.displaytable{
+  width: 100%;
+  font-size: 1.25em;
+  border-radius: 10px;
+  margin: 0px auto;
+  padding: 0px;
+}
+
+.tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-col-title {
+  /* white-space: normal; */
+  text-align: center;
+}
+.tabulator-footer .tabulator-paginator label{
+  color: white !important;
+}
+.tabulator-footer .tabulator-paginator {
+  font-size: 0.75em !important;
+}
+.tabulator-footer button{
+  background-color:  rgb(26, 115, 232) !important;
+}
+.tabulator-footer button:disabled{
+  color: white !important;
+}
+
+#mobileMenu{
+  display: none;
+}
+
+.nav-pills-custom .nav-link::before {
+  content: '';
+  display: block;
+  border-top: 8px solid transparent;
+  border-left: 10px solid black;
+  border-bottom: 8px solid transparent;
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  transform: translateY(-50%);
+  opacity: 0;
+} 
+
+
+
+@media (max-width: 480px) {
+  .nav-pills-custom .nav-link::before {
+    display: none;
+  } 
+  body{
+    padding: 8.5em 0em 0em 0em;
+  }
+
+
+ /* Page Header Section */
+ #mainHeader {
+  display: flex;
+  flex-direction: row;
+}
+#mainHeader .col-4{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding: 0px;
+ margin: 0px;
+}
+
+#mainHeader .col-4 img{
+  width: 100%;
+}
+#mainHeader .col-8{
+ padding: 0px;
+ margin: 0px 0em 0em 0em;
+}
+#mainHeader .col-8 h1{
+  font-size: 1.5em;
+}
+
+/* Main Navigation */
+#navHeader {
+  margin-bottom: 0em;
+  padding: 0.5em 0em 0.5em 0em;
+}
+#navHeader .navbar-brand{
+  width: 60%;
+}
+#navHeader .navbar-brand img{
+  width: 100%;
+  margin: 0%;
+}
+#navHeader .navbar{
+width: 100%;
+padding: 0px 10px;
+margin: 0px;
+}
+
+/* Mobile Menu Navigation */
+  #mobileMenu{
+    display: block;
+    margin: 0px 0px 10px 0px;
+    padding: 0px auto;
+    width: 100%;
+    text-align: center;
+  }
+  #mobileMenu .nav-pills-custom{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #mobileMenu  .nav-link { 
+  font-size: 1.25em;
+  margin: 0px;
+  width: 40%;
+  padding: 0px;
+  margin: 0px 5px;
+  border: 1px solid blue;
+}
+
+/* Sidebar Menu Section */
+  #sidebar{
+    display: none;
+  }
+
+/* Overall Content Section */
+#contentSection{
+  padding: 0px 5px;
+}
+
+  /* Main content section */
+  #mainContent{
+    margin: 0px;
+    width: 100%;
+  }
+
+#mainContent  .card-deck{
+    width: 100%;
+    margin-bottom: 1em;
+}
+#mainContent .card{
+    padding: 0px;
+    margin: 1em 0em;
+    display: grid;
+    /* flex-direction: row; */
+    grid-template-columns: 30% 70%;
+}
+#mainContent .card img{
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+#mainContent .info{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0px 0px;
+  margin: 0px;
+  align-items: center;
+  justify-content: center;
+}
+#mainContent .profilePicture{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 10px 0px 0px 10px;
+}
+#mainContent .winnerUsername{
+  font-size: 1.5em;
+  /* line-height: 2em; */
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+}
+.leaderCaption{
+    padding: 0px;
+    margin: 0px 0px 0px 0px;
+}
+.rank{
+    display: none;
+}
+
+.topScore{
+    justify-content: center;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+.topScore p{
+    font-size: 1.5em;
+    line-height: 1em;
+    text-align: center;
+}
+.topScore p span:last-child{
+  font-size: 0.75em;
+  font-weight: bold;
+}
+.country{
+    font-size: 1.25em;
+    margin: 0px;
+}
+}
+@media (min-width: 481px) and (max-width: 575px){
+  body{
+    padding: 9.0em 0em 0em 0em;
+  }
+  .nav-pills-custom .nav-link::before {
+    display: none;
+  } 
+ /* Page Header Section */
+ #mainHeader {
+  display: flex;
+  flex-direction: row;
+}
+#mainHeader .col-4{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding: 0px;
+ margin: 0px;
+}
+#mainHeader .col-4 img{
+  width: 100%;
+}
+#mainHeader .col-8 h1{
+ padding: 0px;
+ margin: 0px 1em;
+ font-size: 1.75em;
+}
+
+/* Main Navigation */
+#navHeader {
+
+}
+#navHeader .navbar-brand{
+  width: 40%;
+}
+#navHeader .navbar-brand img{
+  width: 100%;
+  margin: 0%;
+}
+#navHeader .navbar{
+width: 100%;
+padding: 0px 10px;
+margin: 0px;
+}
+
+/* Mobile Menu Navigation */
+  #mobileMenu{
+    display: block;
+    margin: 0px 0px 10px 0px;
+    padding: 0px auto;
+    width: 100%;
+    text-align: center;
+  }
+  #mobileMenu .nav-pills-custom{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #mobileMenu  .nav-link { 
+  font-size: 1.25em;
+  margin: 0px;
+  width: 40%;
+  padding: 0px;
+  margin: 0px 5px;
+  border: 1px solid blue;
+}
+
+/* Sidebar Menu Section */
+  #sidebar{
+    display: none;
+  }
+
+/* Overall Content Section */
+#contentSection{
+  padding: 0px 5px;
+}
+
+  /* Main content section */
+  #mainContent{
+    margin: 0px;
+    width: 100%;
+  }
+
+#mainContent  .card-deck{
+    width: 100%;
+    margin-bottom: 1em;
+}
+#mainContent .card{
+    padding: 0px;
+    margin: 1em 0em;
+    display: grid;
+    /* flex-direction: row; */
+    grid-template-columns: 30% 70%;
+}
+#mainContent .card img{
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+#mainContent .info{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0px 0px;
+  margin: 0px;
+  align-items: center;
+  justify-content: center;
+}
+#mainContent .profilePicture{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 10px 0px 0px 10px;
+}
+#mainContent .winnerUsername{
+  font-size: 1.5em;
+  /* line-height: 2em; */
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+}
+.leaderCaption{
+    padding: 0px;
+    margin: 0px 0px 0px 0px;
+}
+.rank{
+    display: none;
+}
+
+.topScore{
+    justify-content: center;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+.topScore p{
+    font-size: 1.5em;
+    line-height: 1em;
+    text-align: center;
+}
+.topScore p span:last-child{
+  font-size: 0.75em;
+  font-weight: bold;
+}
+.country{
+    font-size: 1.25em;
+    margin: 0px;
+}
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+     
+    .nav-pills-custom .nav-link::before {
+      display: none;
+    } 
+    body{
+      padding: 8em 0em 0em 0em;
+    }
+  
+   /* Page Header Section */
+   #mainHeader {
+    display: flex;
+    flex-direction: row;
+  }
+  #mainHeader .col-4{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 0px;
+   margin: 0px;
+  }
+  #mainHeader .col-4 img{
+    width: 100%;
+  }
+  #mainHeader .col-8{
+   padding: 0px 5em 0em 0em;
+   margin: 0px; 
+  }
+  #mainHeader .col-8 h1{
+    font-size: 2em;
+  }
+  
+  /* Main Navigation */
+  #navHeader {
+    margin-bottom: 0em;
+  }
+  #navHeader .navbar-brand{
+    width: 25%;
+    margin: 0px;
+  }
+  #navHeader .navbar-brand img{
+    width: 100%;
+    margin: 0%;
+  }
+  #navHeader .navbar{
+  width: 100%;
+  padding: 0px 10px;
+  margin: 0px;
+  }
+  
+  /* Mobile Menu Navigation */
+    #mobileMenu{
+      display: block;
+      margin: 0px 0px 10px 0px;
+      padding: 0px auto;
+      width: 100%;
+      text-align: center;
+    }
+    #mobileMenu .nav-pills-custom{
+      padding: 0px;
+      margin: 0px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    #mobileMenu  .nav-link { 
+    font-size: 1.25em;
+    margin: 0px;
+    width: 40%;
+    padding: 0px;
+    margin: 0px 5px;
+    border: 1px solid blue;
+  }
+  
+  /* Sidebar Menu Section */
+    #sidebar{
+      display: none;
+    }
+  
+  /* Overall Content Section */
+  #contentSection{
+    padding: 0px 5px;
+  }
+  
+    /* Main content section */
+    #mainContent{
+      margin: 0px;
+      width: 100%;
+    }
+  
+  #mainContent  .card-deck{
+      width: 100%;
+      margin-bottom: 1em;
+  }
+  #mainContent .card{
+      padding: 0px 0px 5px 0px;
+      margin: 0em 1em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    /* justify-content: center; */
+  }
+  
+  #mainContent .info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px 0px;
+    margin: 0px;
+    align-items: center;
+    justify-content: center;
+  }
+  #mainContent .profilePicture{
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+      border-radius: 10px 10px 0px 0px;
+  }
+  #mainContent .winnerUsername{
+    font-size: 1.5em;
+    /* line-height: 2em; */
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+  }
+  .leaderCaption{
+    display: flex;
+      padding: 0px;
+      margin: 0px 0px 2.5px 0px;
+  }
+  .rank{
+    padding: 0px 5px;
+    margin: 0px;
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.rank img{
+    width: 40%;
+}
+  
+  .topScore{
+      justify-content: start;
+      text-align: left;
+      padding: 0px;
+      margin: 0px;
+      width: 50%;
+  }
+  .topScore p{
+      font-size: 1.25em;
+      line-height: 1em;
+      text-align: left;
+  }
+  .topScore p span:last-child{
+    font-size: 0.75em;
+    font-weight: bold;
+  }
+  .country{
+      font-size: 1.15em;
+      margin: 0px;
+  }
+  
+    }
+  
+  .nav-pills-custom .nav-link.active::before {
+    opacity: 1;
+  }
+  
+  @media (min-width:768px) and (max-width:1280px){
+    body{
+      padding: 10.5em 0em 0em 0em;
+    }
+    #sidebar{
+      padding: 3.5em 1em 0em 1em;
+    }
+  #sidebar span{
+    font-size: 0.625em;
+    padding: 0px;
+    margin: 0px;
+  }
+  }
+  @media (min-width:1281px) and (max-width:1919px){
+    body{
+      padding: 14.5em 0em 0em 0em;
+    }
+  }
+  @media (min-width:1920px){
+    body{
+      padding-top: 16em;
+    }
+  }
+  
+  @media (max-width:991px){
+ 
+    #navbarSupportedContent {
+      background-color: #f0f2f5;
+      margin: 0.5em 0em 1em 0em;
+    }
+    #navbarSupportedContent .navbar-nav li {
+      width: 100%;
+      margin-bottom: 0;
+      border-bottom: 1px solid #e1e2e4;
+  }
+#navbarSupportedContent .navbar-nav a {
+    display: block;
+    padding: 10px 50px 10px 40px;
+    background-color: #f0f2f5;
+    text-transform: uppercase;
+    font-size: 1em;
+    text-align: left;
+    color: #555;
+}
+#navbarSupportedContent .active{
+  border-bottom: none;
+}
+#navbarSupportedContent .form-inline{
+  display: grid;
+  grid-template-columns: 95% 5%;
+  flex-direction: row;
+  width: 100%;
+  padding: 0%;
+  margin: 0%;
+  background-color: #fff;
+}
+#navbarSupportedContent .form-inline .form-control{
+  display: flex;
+  margin: 0%;
+  border: none;
+  padding: 0px 0px 0px 5px;
+  border-radius: 0%;
+  background-color: #fff;
+}
+#navbarSupportedContent .form-inline .btn{
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  color: white;
+  justify-content: flex-end;
+}
+#navbarSupportedContent .btn .fa-search{
+  color: white;  
+  padding: 10px;
+  background-color: #ffaf30;
+}
+}
+  
+
+ 
+  
+
